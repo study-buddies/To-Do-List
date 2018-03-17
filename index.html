@@ -9,7 +9,7 @@
     }
       pre {
         font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         overflow: auto;
         margin-left: auto;
         margin-right: auto;
@@ -17,7 +17,8 @@
         background-color: #eee;
         width: 650px!ie7;
         padding-bottom: 20px!ie7;
-        max-height: 600px;
+        max-height: 400px;
+
       }
       .container {
         margin-left: auto;
@@ -42,13 +43,22 @@
         text-transform: capitalize;
       }
       ul {
-        margin-bottom: 20px;
-        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
       }
       h3 {
+        text-transform: capitalize;
         margin-top: 8px;
         margin-bottom: 5px;
         border-bottom: 1px solid rgba(0,0,0,.1);
+      }
+      .highlight-code {
+        font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+        font-size: 87.5%;
+        color: #e83e8c;
+      }
+      p {
+        margin: 15px 0
       }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -62,28 +72,29 @@
       <p>all the clses use the fallowing structure (property)-(side)-(value) where:</p>
       <p>Property can be:</p>
       <ul>
-        <li>margin</li>
-        <li>padding</li>
+        <li><code class="highlight-code">margin</code></li>
+        <li><code class="highlight-code">padding</code></li>
       </ul>
       <p>Side can be:</p>
       <ul>
-        <li>left</li>
-        <li>right</li>
-        <li>top</li>
-        <li>bottom</li>
-        <li>x for the horizontal axis</li>
-        <li>y for the vertical axis</li>
+        <li><code class="highlight-code">left</code></li>
+        <li><code class="highlight-code">right</code></li>
+        <li><code class="highlight-code">top</code></li>
+        <li><code class="highlight-code">bottom</code></li>
+        <li><code class="highlight-code">x</code> for the horizontal axis</li>
+        <li><code class="highlight-code">y</code> for the vertical axis</li>
       </ul>
       <p>Value can be:</p>
       <ul>
-        <li>0 for 0 value</li>
-        <li>1 for .25rem value</li>
-        <li>2 for .5rem value</li>
-        <li>3 for 1rem value</li>
-        <li>4 for 1.5rem value</li>
-        <li>5 for 2.3 rem value</li>
+        <li><code class="highlight-code">0</code> for 0 value</li>
+        <li><code class="highlight-code">1</code> for .25rem value</li>
+        <li><code class="highlight-code">2</code> for .5rem value</li>
+        <li><code class="highlight-code">3</code> for 1rem value</li>
+        <li><code class="highlight-code">4</code> for 1.5rem value</li>
+        <li><code class="highlight-code">5</code> for 2.3 rem value</li>
+        <li><code class="highlight-code">auto</code> this is just for the <code class="highlight-code">margin</code> class and set it to auto </li>
       </ul>
-      <p>and a special class is the margin-x-auto who set the left and the right margin to auto, for those elements who has display-block and have a specific width setted</p>
+
       <h3>example</h3>
       <pre>
         .padding-2 {
@@ -102,26 +113,482 @@
         }
       </pre>
       <h1>Grid System with Flexbox</h1>
-      <div class="display-flex flex-row">
+      <p>To set a div like a flexbox just use the <code class="highlight-code">.display-flex</code> class </p>
+      <h3>Direction</h3>
+      <p>to set a direction to the flex container in the horizontal axis u can use <code class="highlight-code">.flex-row</code> class for the left to right direction (this is the default direction if it is not specified, but some times is needed), or for the right to left direction use <code class="highlight-code">.flex-row-reverse</code> class</p>
+      <div class="display-flex flex-row margin-bottom-4">
         <div class="padding-2">
-          asd
+          Flex Item
         </div>
-        <div class="padding-x-2 padding-y-2">
-          asd asdasd
+        <div class="padding-2">
+          Flex Item
         </div>
-        <div class="padding-top-2 padding-bottom-2 padding-right-2 padding-left-2">
-          asd asdasd
+        <div class="padding-2">
+          Flex Item
         </div>
       </div>
+      <div class="display-flex flex-row-reverse margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <pre>
+        &lt;div class="display-flex flex-row"&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+        &lt;/div&gt;
 
+        &lt;div class="display-flex flex-row-reverse"&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <p>to set the direction in the verical axis u can use <code class="highlight-code">.flex-col</code> class for the top to bottom direction (this is the default direction if it is not specified, but some times is needed), or for the bottom to top direction use <code class="highlight-code">.flex-col-reverse</code> class</p>
+      <div class="display-flex flex-col margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-col-reverse margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <pre>
+        &lt;div class="display-flex flex-col"&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+        &lt;/div&gt;
 
+        &lt;div class="display-flex flex-col-reverse"&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <h3>justify content</h3>
+      <p>the <code class="highlight-code">.justify-content</code> is used to change the alignament of every item in the main axis (horizontal if <code class="highlight-code">flex-row</code> is selected, this case specific, but if is selected <code class="highlight-code">flex-col</code> it will be align in the vertical axis). u can use <code class="highlight-code">start</code>, who is the browser's default, <code class="highlight-code">end</code>, <code class="highlight-code">center</code>, <code class="highlight-code">between</code>, <code class="highlight-code">around</code> </p>
+      <div class="display-flex flex-justify-content-start margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-justify-content-end margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-justify-content-center margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-justify-content-between margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-justify-content-around margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <pre>
+        &lt;div class="display-flex flex-justify-content-start"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-justify-content-end"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-justify-content-center"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-justify-content-between"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-justify-content-around"&gt; ... &lt;/div&gt;
+      </pre>
+      <h3>Align items</h3>
+      <p>the <code class="highlight-code">align-items</code> is used to change the alignment of flex items in the cross axis (vertical if <code class="highlight-code">flex-row</code> is selected, this case specific, but if is selected <code class="highlight-code">flex-col</code> it will be align in the horizontal axis) u can use <code class="highlight-code">stretch</code>, who is the browser's default, <code class="highlight-code">start</code>, <code class="highlight-code">end</code>, <code class="highlight-code">center</code>, <code class="highlight-code">baseline</code> </p>
+      <div class="display-flex flex-align-items-start margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-align-items-end margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-align-items-center margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-align-items-baseline margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-align-items-stretch margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <pre>
+        &lt;div class="display-flex flex-align-items-start"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-align-items-end"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-align-items-center"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-align-items-baseline"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-align-items-stretch"&gt; ... &lt;/div&gt;
+      </pre>
+      <h3>Align self</h3>
+      <p>use <code class="highlight-code">align-self</code>in a item to individually align it in a flexbox object in the cross axis (vertical if <code class="highlight-code">flex-row</code> is selected, this case specific, but if is selected <code class="highlight-code">flex-col</code> it will be align in the horizontal axis) u can use the same options as <code class="highlight-code">align-items</code>:<code class="highlight-code">stretch</code>, who is the browser's default, <code class="highlight-code">start</code>, <code class="highlight-code">end</code>, <code class="highlight-code">center</code>, <code class="highlight-code">baseline</code> </p>
+      <div class="display-flex margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2 flex-align-self-start">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2 flex-align-self-end">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2 flex-align-self-center">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2 flex-align-self-baseline">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex margin-bottom-4" style="height:70px;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2 flex-align-self-stretch">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <h3>Auto margin</h3>
+      <p>flexbox work really good with auto margins, since the flexbox object have really space inside it, u can push an element width margin auto since it split the space available between each side who has auto in the margin value</p>
+      <div class="display-flex margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2 margin-right-auto">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2 margin-left-auto">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2 margin-x-auto">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <pre>
+        &lt;div class="display-flex"&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2 margin-right-auto"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="display-flex"&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2 margin-left-auto"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="display-flex"&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2 margin-x-auto"&gt;
+            Flex Item
+          &lt;/div&gt;
+          &lt;div class="padding-2"&gt;
+            Flex Item
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <h3>Wrap</h3>
+      <p>the flexbox object default behavior is not wrap, and u can use the <code class="highlight-code">.flex-nowrap</code> to keep this the same, but if u want change this behavior u can use <code class="highlight-code">.flex-wrap</code> to wrap into the container, or the <code class="highlight-code">.flex-wrap-reverse</code> to wrap but in reverse, instead of to the bottom, to the top  </p>
+      <div class="display-flex flex-row flex-nowrap margin-bottom-4" style="width: 170px; margin-left: 0!important;">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-wrap margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <div class="display-flex flex-wrap-reverse margin-bottom-4">
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+        <div class="padding-2">
+          Flex Item
+        </div>
+      </div>
+      <pre>
+        &lt;div class="display-flex flex-nowrap"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-wrap"&gt; ... &lt;/div&gt;
+        &lt;div class="display-flex flex-wrap-reverse"&gt; ... &lt;/div&gt;
+      </pre>
 
 
       <h1>Progress Bar</h1>
       <h2>default theme</h2>
-      <div class="progress-bar">
+      <div class="progress-bar margin-y-3">
         <div class="progress" style="width: 80%">
-          80%
+    
         </div>
       </div>
       <pre>
@@ -133,7 +600,7 @@
       </pre>
       <h2>change color theme</h2>
       <h3>Red Color</h3>
-      <div class="progress-bar">
+      <div class="progress-bar margin-y-3">
         <div class="progress red" style="width: 80%">
           80%
         </div>
