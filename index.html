@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    body {
+      font-size: 14px;
+    }
+      pre {
+        font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+        margin-bottom: 10px;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        background-color: #eee;
+        width: 650px!ie7;
+        padding-bottom: 20px!ie7;
+        max-height: 600px;
+      }
+      .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+      }
+      .container > div {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Progress Bar</h1>
+      <h2>default theme</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 80%">
+          80%
+        </div>
+      </div>
+      <pre>
+        &lt;div class="progress-bar"&gt;
+          &lt;div class="progress" style="width: 80%"&gt;
+            80%
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <h2>change color theme</h2>
+      <h3>Red Color</h3>
+      <div class="progress-bar">
+        <div class="progress red" style="width: 80%">
+          80%
+        </div>
+      </div>
+      <pre>
+        &lt;div class="progress-bar"&gt;
+          &lt;div class="progress <span style="color: red; font-weight: 600;">red</span>" style="width: 80%"&gt;
+            80%
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <h3>yellow Color</h3>
+      <div class="progress-bar">
+        <div class="progress yellow" style="width: 80%">
+          80%
+        </div>
+      </div>
+      <pre>
+        &lt;div class="progress-bar"&gt;
+          &lt;div class="progress <span style="color: yellow; font-weight: 600;">yellow</span>" style="width: 80%"&gt;
+            80%
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+
+
+    </div>
+
+  </body>
+</html>
