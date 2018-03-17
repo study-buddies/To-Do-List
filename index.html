@@ -41,6 +41,15 @@
         margin: 50px 0 20px 0;
         text-transform: capitalize;
       }
+      ul {
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+      h3 {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+      }
     </style>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -56,7 +65,7 @@
         <li>margin</li>
         <li>padding</li>
       </ul>
-      <p>side can be:</p>
+      <p>Side can be:</p>
       <ul>
         <li>left</li>
         <li>right</li>
@@ -65,6 +74,33 @@
         <li>x for the horizontal axis</li>
         <li>y for the vertical axis</li>
       </ul>
+      <p>Value can be:</p>
+      <ul>
+        <li>0 for 0 value</li>
+        <li>1 for .25rem value</li>
+        <li>2 for .5rem value</li>
+        <li>3 for 1rem value</li>
+        <li>4 for 1.5rem value</li>
+        <li>5 for 2.3 rem value</li>
+      </ul>
+      <p>and a special class is the margin-x-auto who set the left and the right margin to auto, for those elements who has display-block and have a specific width setted</p>
+      <h3>example</h3>
+      <pre>
+        .padding-2 {
+          padding: .5rem;
+        }
+        .margin-top-2 {
+          margin: .5rem;
+        }
+        .margin-y-2 {
+          margin-top: .5rem;
+          margin-bottom: .5rem;
+        }
+        .margin-x-auto {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      </pre>
       <h1>Grid System with Flexbox</h1>
       <div class="display-flex flex-row">
         <div class="padding-2">
