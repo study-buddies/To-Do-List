@@ -28,12 +28,59 @@
         margin-left: auto !important;
         margin-right: auto !important;
       }
+      .display-flex {
+        background: rgba(230, 112, 211, .2);
+        border: 1px solid rgba(230, 112, 211, .8);
+      }
+      .display-flex > div {
+        background-color: rgba(230, 112, 211, .5);
+        border: 1px solid rgba(230, 112, 211, .8);
+      }
+      h1 {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        margin: 50px 0 20px 0;
+        text-transform: capitalize;
+      }
     </style>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
     <div class="container">
+      <h1>padding and Margin</h1>
+      <p>the margin and padding classes are maked to have some kind of concistence on that property every time we use it</p>
+      <h3>how to use it:</h3>
+      <p>all the clses use the fallowing structure (property)-(side)-(value) where:</p>
+      <p>Property can be:</p>
+      <ul>
+        <li>margin</li>
+        <li>padding</li>
+      </ul>
+      <p>side can be:</p>
+      <ul>
+        <li>left</li>
+        <li>right</li>
+        <li>top</li>
+        <li>bottom</li>
+        <li>x for the horizontal axis</li>
+        <li>y for the vertical axis</li>
+      </ul>
+      <h1>Grid System with Flexbox</h1>
+      <div class="display-flex flex-row">
+        <div class="padding-2">
+          asd
+        </div>
+        <div class="padding-x-2 padding-y-2">
+          asd asdasd
+        </div>
+        <div class="padding-top-2 padding-bottom-2 padding-right-2 padding-left-2">
+          asd asdasd
+        </div>
+      </div>
+
+
+
+
       <h1>Progress Bar</h1>
       <h2>default theme</h2>
       <div class="progress-bar">
