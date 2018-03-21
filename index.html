@@ -5,6 +5,10 @@
     <title></title>
     <style media="screen">
     body {
+      font-size: 14px !important;
+      font-family: "Open Sans", Helvetica, sans-serif;
+    }
+    button, .buttons {
       font-size: 14px;
     }
       pre {
@@ -29,11 +33,11 @@
         margin-left: auto !important;
         margin-right: auto !important;
       }
-      .display-flex {
+      .display-flex.content {
         background: rgba(230, 112, 211, .2);
         border: 1px solid rgba(230, 112, 211, .8);
       }
-      .display-flex > div {
+      .display-flex.content > div {
         background-color: rgba(230, 112, 211, .5);
         border: 1px solid rgba(230, 112, 211, .8);
       }
@@ -42,7 +46,7 @@
         margin: 50px 0 20px 0;
         text-transform: capitalize;
       }
-      ul {
+      .container > ul {
         margin-bottom: 5px;
         margin-top: 5px;
       }
@@ -59,6 +63,10 @@
       }
       p {
         margin: 15px 0
+      }
+      .tabs-nav, .tab-panel {
+        background-color: transparent;
+        border: none;
       }
     </style>
     <link rel="stylesheet" href="style.css">
@@ -116,7 +124,7 @@
       <p>To set a div like a flexbox just use the <code class="highlight-code">.display-flex</code> class </p>
       <h3>Direction</h3>
       <p>to set a direction to the flex container in the horizontal axis u can use <code class="highlight-code">.flex-row</code> class for the left to right direction (this is the default direction if it is not specified, but some times is needed), or for the right to left direction use <code class="highlight-code">.flex-row-reverse</code> class</p>
-      <div class="display-flex flex-row margin-bottom-4">
+      <div class="display-flex flex-row margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -127,7 +135,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-row-reverse margin-bottom-4">
+      <div class="display-flex flex-row-reverse margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -164,7 +172,7 @@
         &lt;/div&gt;
       </pre>
       <p>to set the direction in the verical axis u can use <code class="highlight-code">.flex-col</code> class for the top to bottom direction (this is the default direction if it is not specified, but some times is needed), or for the bottom to top direction use <code class="highlight-code">.flex-col-reverse</code> class</p>
-      <div class="display-flex flex-col margin-bottom-4">
+      <div class="display-flex flex-col margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -175,7 +183,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-col-reverse margin-bottom-4">
+      <div class="display-flex flex-col-reverse margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -213,7 +221,7 @@
       </pre>
       <h3>justify content</h3>
       <p>the <code class="highlight-code">.justify-content</code> is used to change the alignament of every item in the main axis (horizontal if <code class="highlight-code">flex-row</code> is selected, this case specific, but if is selected <code class="highlight-code">flex-col</code> it will be align in the vertical axis). u can use <code class="highlight-code">start</code>, who is the browser's default, <code class="highlight-code">end</code>, <code class="highlight-code">center</code>, <code class="highlight-code">between</code>, <code class="highlight-code">around</code> </p>
-      <div class="display-flex flex-justify-content-start margin-bottom-4">
+      <div class="display-flex flex-justify-content-start margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -224,7 +232,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-justify-content-end margin-bottom-4">
+      <div class="display-flex flex-justify-content-end margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -235,7 +243,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-justify-content-center margin-bottom-4">
+      <div class="display-flex flex-justify-content-center margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -246,7 +254,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-justify-content-between margin-bottom-4">
+      <div class="display-flex flex-justify-content-between margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -257,7 +265,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-justify-content-around margin-bottom-4">
+      <div class="display-flex flex-justify-content-around margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -277,7 +285,7 @@
       </pre>
       <h3>Align items</h3>
       <p>the <code class="highlight-code">align-items</code> is used to change the alignment of flex items in the cross axis (vertical if <code class="highlight-code">flex-row</code> is selected, this case specific, but if is selected <code class="highlight-code">flex-col</code> it will be align in the horizontal axis) u can use <code class="highlight-code">stretch</code>, who is the browser's default, <code class="highlight-code">start</code>, <code class="highlight-code">end</code>, <code class="highlight-code">center</code>, <code class="highlight-code">baseline</code> </p>
-      <div class="display-flex flex-align-items-start margin-bottom-4" style="height:70px;">
+      <div class="display-flex flex-align-items-start margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -288,7 +296,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-align-items-end margin-bottom-4" style="height:70px;">
+      <div class="display-flex flex-align-items-end margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -299,7 +307,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-align-items-center margin-bottom-4" style="height:70px;">
+      <div class="display-flex flex-align-items-center margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -310,7 +318,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-align-items-baseline margin-bottom-4" style="height:70px;">
+      <div class="display-flex flex-align-items-baseline margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -321,7 +329,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-align-items-stretch margin-bottom-4" style="height:70px;">
+      <div class="display-flex flex-align-items-stretch margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -341,7 +349,7 @@
       </pre>
       <h3>Align self</h3>
       <p>use <code class="highlight-code">align-self</code>in a item to individually align it in a flexbox object in the cross axis (vertical if <code class="highlight-code">flex-row</code> is selected, this case specific, but if is selected <code class="highlight-code">flex-col</code> it will be align in the horizontal axis) u can use the same options as <code class="highlight-code">align-items</code>:<code class="highlight-code">stretch</code>, who is the browser's default, <code class="highlight-code">start</code>, <code class="highlight-code">end</code>, <code class="highlight-code">center</code>, <code class="highlight-code">baseline</code> </p>
-      <div class="display-flex margin-bottom-4" style="height:70px;">
+      <div class="display-flex margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -352,7 +360,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex margin-bottom-4" style="height:70px;">
+      <div class="display-flex margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -363,7 +371,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex margin-bottom-4" style="height:70px;">
+      <div class="display-flex margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -374,7 +382,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex margin-bottom-4" style="height:70px;">
+      <div class="display-flex margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -385,7 +393,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex margin-bottom-4" style="height:70px;">
+      <div class="display-flex margin-bottom-4 content" style="height:70px;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -398,7 +406,7 @@
       </div>
       <h3>Auto margin</h3>
       <p>flexbox work really good with auto margins, since the flexbox object have really space inside it, u can push an element width margin auto since it split the space available between each side who has auto in the margin value</p>
-      <div class="display-flex margin-bottom-4">
+      <div class="display-flex margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -409,7 +417,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex margin-bottom-4">
+      <div class="display-flex margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -420,7 +428,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex margin-bottom-4">
+      <div class="display-flex margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -469,7 +477,7 @@
       </pre>
       <h3>Wrap</h3>
       <p>the flexbox object default behavior is not wrap, and u can use the <code class="highlight-code">.flex-nowrap</code> to keep this the same, but if u want change this behavior u can use <code class="highlight-code">.flex-wrap</code> to wrap into the container, or the <code class="highlight-code">.flex-wrap-reverse</code> to wrap but in reverse, instead of to the bottom, to the top  </p>
-      <div class="display-flex flex-row flex-nowrap margin-bottom-4" style="width: 170px; margin-left: 0!important;">
+      <div class="display-flex flex-row flex-nowrap margin-bottom-4 content" style="width: 170px; margin-left: 0!important;">
         <div class="padding-2">
           Flex Item
         </div>
@@ -489,7 +497,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-wrap margin-bottom-4">
+      <div class="display-flex flex-wrap margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -533,7 +541,7 @@
           Flex Item
         </div>
       </div>
-      <div class="display-flex flex-wrap-reverse margin-bottom-4">
+      <div class="display-flex flex-wrap-reverse margin-bottom-4 content">
         <div class="padding-2">
           Flex Item
         </div>
@@ -582,13 +590,83 @@
         &lt;div class="display-flex flex-wrap"&gt; ... &lt;/div&gt;
         &lt;div class="display-flex flex-wrap-reverse"&gt; ... &lt;/div&gt;
       </pre>
+      <h1>grid System</h1>
+      <p>we will using a grid system of 10 cols, and every col will using the 10% of the actual available space in the container, teh structure of the selector will be <code class="highlight-code">col-width-(value)</code> where value can be 1 - 10 and it represent the amout of % it will teke in the actual container. Try always to fill the 100% of the width in every line. </p>
+      <div class="display-flex flex-wrap margin-bottom-4 content">
+        <div class="padding-2 col-width-2">
+          20% Width
+        </div>
+        <div class="padding-2 col-width-3">
+          30% Width
+        </div>
+        <div class="padding-2 col-width-3">
+          30% Width
+        </div>
+        <div class="padding-2 col-width-2">
+          20% Width
+        </div>
+      </div>
+      <pre>
+        &lt;div class="display-flex flex-wrap"&gt;
+          &lt;div class="padding-2 col-width-2"&gt;
+            20% Width
+          &lt;/div&gt;
+          &lt;div class="padding-2 col-width-3"&gt;
+            30% Width
+          &lt;/div&gt;
+          &lt;div class="padding-2 col-width-3"&gt;
+            30% Width
+          &lt;/div&gt;
+          &lt;div class="padding-2 col-width-2"&gt;
+            20% Width
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <h1>Buttons and Anchors</h1>
 
+      <button class="col-width-10 margin-bottom-3" name="button">Default button class col-width-10</button>
+      <a href="#" class="button col-width-6 margin-bottom-1 primary">Default anchor width button class & col-width-6</a>
+      <a href="#" class="button col-width-6 margin-bottom-1 error">Default anchor width button class & col-width-6</a>
+      <a href="#" class="button col-width-6 margin-bottom-1 waiting">Default anchor width button class & col-width-6</a>
+      <a href="#" class="button col-width-6 margin-bottom-1 secondary">Default anchor width button class & col-width-6</a>
+      <a href="#" class="button col-width-6 margin-bottom-1 success">Default anchor width button class & col-width-6</a>
+
+      <button class="state-buttons" state="0" data-start-state-text="Start It!" data-first-state-text="In Progress!" data-second-state-text="Done!"></button>
+
+
+      <h1>Tabs Panel</h1>
+      <div class="display-flex flex-col tab-panel" >
+          <ul class="display-flex tabs-nav flex-align-items-end">
+            <li><a class="active" data-toggle="panel-HTML" data-class-ref="waiting">HTML</a></li>
+            <li><a data-toggle="panel-CSS" data-class-ref="primary">CSS</a></li>
+            <li><a data-toggle="panel-JS" data-class-ref="error">JavaScript</a></li>
+            <li><a data-toggle="panel-JQ" data-class-ref="success">JQuery</a></li>
+            <li><a data-toggle="panel-PROJ" data-class-ref="secondary">Projects</a></li>
+          </ul>
+
+          <div class="panels active" id="panel-HTML">
+            HTML
+          </div>
+          <div class="panels" id="panel-CSS">
+            CSS
+          </div>
+          <div class="panels" id="panel-JS">
+            JavaScript
+          </div>
+          <div class="panels" id="panel-JQ">
+            JQuery
+          </div>
+          <div class="panels" id="panel-PROJ">
+            Projects
+          </div>
+
+      </div>
 
       <h1>Progress Bar</h1>
       <h2>default theme</h2>
       <div class="progress-bar margin-y-3">
         <div class="progress" style="width: 80%">
-    
+
         </div>
       </div>
       <pre>
@@ -601,26 +679,39 @@
       <h2>change color theme</h2>
       <h3>Red Color</h3>
       <div class="progress-bar margin-y-3">
-        <div class="progress red" style="width: 80%">
+        <div class="progress error" style="width: 80%">
           80%
         </div>
       </div>
       <pre>
         &lt;div class="progress-bar"&gt;
-          &lt;div class="progress <span style="color: red; font-weight: 600;">red</span>" style="width: 80%"&gt;
+          &lt;div class="progress <span style="color: red; font-weight: 600;">error</span>" style="width: 80%"&gt;
             80%
           &lt;/div&gt;
         &lt;/div&gt;
       </pre>
       <h3>yellow Color</h3>
       <div class="progress-bar">
-        <div class="progress yellow" style="width: 80%">
+        <div class="progress waiting" style="width: 80%">
           80%
         </div>
       </div>
       <pre>
         &lt;div class="progress-bar"&gt;
-          &lt;div class="progress <span style="color: yellow; font-weight: 600;">yellow</span>" style="width: 80%"&gt;
+          &lt;div class="progress <span style="color: yellow; font-weight: 600;">waiting</span>" style="width: 80%"&gt;
+            80%
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <h3>yellow Color</h3>
+      <div class="progress-bar">
+        <div class="progress success" style="width: 80%">
+          80%
+        </div>
+      </div>
+      <pre>
+        &lt;div class="progress-bar"&gt;
+          &lt;div class="progress <span style="color: yellow; font-weight: 600;">success</span>" style="width: 80%"&gt;
             80%
           &lt;/div&gt;
         &lt;/div&gt;
@@ -628,6 +719,8 @@
 
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="behavior.js"></script>
 
   </body>
 </html>
