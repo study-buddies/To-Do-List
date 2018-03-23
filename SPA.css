@@ -98,154 +98,187 @@ a {
 
 /* FlexBox Grid */
 .display-flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
 }
+
 
 /* Flexbox direction */
 .flex-row {
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-  -ms-flex-direction: row !important;
-  flex-direction: row !important;
+  -webkit-box-orient: horizontal!important;
+  -webkit-box-direction: normal!important;
+  -ms-flex-direction: row!important;
+  flex-direction: row!important;
 }
 .flex-row-reverse {
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: reverse !important;
-  -ms-flex-direction: row !important;
-  flex-direction: row-reverse !important;
+  -webkit-box-orient: horizontal!important;
+  -webkit-box-direction: reverse!important;
+  -ms-flex-direction: row!important;
+  flex-direction: row-reverse!important;
 }
 .flex-col {
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-  -ms-flex-direction: column !important;
-  flex-direction: column !important;
+  -webkit-box-orient: vertical!important;
+  -webkit-box-direction: normal!important;
+  -ms-flex-direction: column!important;
+  flex-direction: column!important;
 }
 .flex-col-reverse {
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: reverse !important;
-  -ms-flex-direction: column-reverse !important;
-  flex-direction: column-reverse !important;
+  -webkit-box-orient: vertical!important;
+  -webkit-box-direction: reverse!important;
+  -ms-flex-direction: column-reverse!important;
+  flex-direction: column-reverse!important;
 }
+
 
 /* Flexbox Justify Content */
 .flex-justify-content-start {
-  -webkit-box-pack: start !important;
-  -ms-flex-pack: start !important;
-  justify-content: flex-start !important;
+  -webkit-box-pack: start!important;
+  -ms-flex-pack: start!important;
+  justify-content: flex-start!important;
 }
 .flex-justify-content-end {
-  -webkit-box-pack: end !important;
-  -ms-flex-pack: end !important;
-  justify-content: flex-end !important;
+  -webkit-box-pack: end!important;
+  -ms-flex-pack: end!important;
+  justify-content: flex-end!important;
 }
 .flex-justify-content-center {
-  -webkit-box-pack: center !important;
-  -ms-flex-pack: center !important;
-  justify-content: center !important;
+  -webkit-box-pack: center!important;
+  -ms-flex-pack: center!important;
+  justify-content: center!important;
 }
 .flex-justify-content-between {
-  -webkit-box-pack: justify !important;
-  -ms-flex-pack: justify !important;
-  justify-content: space-between !important;
+  -webkit-box-pack: justify!important;
+  -ms-flex-pack: justify!important;
+  justify-content: space-between!important;
 }
 .flex-justify-content-around {
-  -ms-flex-pack: distribute !important;
-  justify-content: space-around !important;
+  -ms-flex-pack: distribute!important;
+  justify-content: space-around!important;
 }
+
 
 /* Flexbox Align Items */
 .flex-align-items-start {
-  -webkit-box-align: start !important;
-  -ms-flex-align: start !important;
-  align-items: flex-start !important;
+  -webkit-box-align: start!important;
+  -ms-flex-align: start!important;
+  align-items: flex-start!important;
 }
 .flex-align-items-end {
-  -webkit-box-align: end !important;
-  -ms-flex-align: end !important;
-  align-items: flex-end !important;
+  -webkit-box-align: end!important;
+  -ms-flex-align: end!important;
+  align-items: flex-end!important;
 }
 .flex-align-items-center {
-  -webkit-box-align: center !important;
-  -ms-flex-align: center !important;
-  align-items: center !important;
+  -webkit-box-align: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
 }
 .flex-align-items-baseline {
-  -webkit-box-align: baseline !important;
-  -ms-flex-align: baseline !important;
-  align-items: baseline !important;
+  -webkit-box-align: baseline!important;
+  -ms-flex-align: baseline!important;
+  align-items: baseline!important;
 }
 .flex-align-items-stretch {
-  -webkit-box-align: stretch !important;
-  -ms-flex-align: stretch !important;
-  align-items: stretch !important;
+  -webkit-box-align: stretch!important;
+  -ms-flex-align: stretch!important;
+  align-items: stretch!important;
 }
+
+
 /* Flexbox Align Self */
 .flex-align-self-start {
-  -ms-flex-item-align: start !important;
-  align-self: flex-start !important;
+  -ms-flex-item-align: start!important;
+  align-self: flex-start!important;
 }
 .flex-align-self-end {
-  -ms-flex-item-align: end !important;
-  align-self: flex-end !important;
+  -ms-flex-item-align: end!important;
+  align-self: flex-end!important;
 }
 .flex-align-self-center {
-  -ms-flex-item-align: center !important;
-  align-self: center !important;
+  -ms-flex-item-align: center!important;
+  align-self: center!important;
 }
 .flex-align-self-baseline {
-  -ms-flex-item-align: baseline !important;
-  align-self: baseline !important;
+  -ms-flex-item-align: baseline!important;
+  align-self: baseline!important;
 }
 .flex-align-self-stretch {
-  -ms-flex-item-align: stretch !important;
-  align-self: stretch !important;
+  -ms-flex-item-align: stretch!important;
+  align-self: stretch!important;
 }
+
 
 /* Flexbox Wrap */
 .flex-nowrap {
-  -ms-flex-wrap: nowrap !important;
-  flex-wrap: nowrap !important;
+  -ms-flex-wrap: nowrap!important;
+  flex-wrap: nowrap!important;
 }
 .flex-wrap {
-  -ms-flex-wrap: wrap !important;
-  flex-wrap: wrap !important;
+  -ms-flex-wrap: wrap!important;
+  flex-wrap: wrap!important;
 }
 .flex-wrap-reverse {
-  -ms-flex-wrap: wrap-reverse !important;
-  flex-wrap: wrap-reverse !important;
+  -ms-flex-wrap: wrap-reverse!important;
+  flex-wrap: wrap-reverse!important;
 }
 
 /* ------------------------------------------------------ */
 
 /* Grid System */
+.col-width-1 {
+  width: 10%;
+}
+.col-width-2 {
+  width: 20%;
+}
+.col-width-3 {
+  width: 30%;
+}
+.col-width-4 {
+  width: 40%;
+}
+.col-width-5 {
+  width: 50%;
+}
+.col-width-6 {
+  width: 60%;
+}
+.col-width-7 {
+  width: 70%;
+}
+.col-width-8 {
+  width: 80%;
+}
+.col-width-9 {
+  width: 90%;
+}
+.col-width-10 {
+  width: 100%;
+}
 
 /* ------------------------------------------------------ */
 
 /* Buttons and Anchors */
-button,
-.button {
-  border: 1px solid #026f8d;
-  background-color: #0280a4;
-  color: #fff;
-  padding: 0.5em 1em;
-  font-weight: 500;
-  border-radius: 2px;
-  box-shadow: inset 0 0 4px #026f8d;
-  transition: 0.2s;
-  display: inline-block;
-  text-align: center;
-}
-button:hover,
-.button:hover {
-  background-color: #026f8d;
-  color: #fff;
-  border-color: ;
-  box-shadow: none;
-  transition: 0.2s;
-  cursor: pointer;
-}
+button, .button {
+   border: 1px solid #778ea2;
+   background-color: #64788a;
+   color: #fff;
+   padding: 0.5em 1em;
+   font-weight: 500;
+   border-radius: 2px;
+   box-shadow: inset 0 0 4px #778ea2;
+   transition: .2s;
+   display: inline-block;
+   text-align: center;
+ }
+ button:hover, .button:hover {
+   background-color: #778ea2;
+   color: #fff;
+   box-shadow: none;
+   transition: 0.2s;
+   cursor: pointer;
+ }
 
 /* ------------------------------------------------------ */
 
@@ -259,11 +292,11 @@ button:hover,
   display: inline-block;
 }
 .tabs-nav a {
-  padding: 0.75rem;
-  display: inline-block;
-  background-color: #64788a;
-  color: #fff;
-  margin-right: 2px;
+ padding: 0.75rem;
+ display: inline-block;
+ background-color: #64788a;
+ color: #fff;
+ margin-right: 2px;
 }
 .tabs-nav a:hover {
   background: #778ea2;
@@ -276,18 +309,20 @@ button:hover,
   border-top-right-radius: 5px;
 }
 .tabs-nav a.active {
-  padding: 0.9rem;
+  padding: 0.90rem;
   border-radius: 5px 5px 0 0;
 }
 .panels {
   display: none;
-  min-height: 200px;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 0.8rem;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+  padding: 2rem 0.8rem;
+  overflow: auto;
 }
-.panels.active {
-  display: block;
+.panels.active, .exercise-list.active, .muted.active {
+  display: block !important;
 }
+
+
 
 /* ------------------------------------------------------ */
 
@@ -297,10 +332,10 @@ button:hover,
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
-  height: 25px;
+  height: 2rem;
 }
 .progress {
-  background-color: #00b5e7;
+  background-color: #64788a;
   text-align: center;
   border-radius: 3px;
   border: none !important;
@@ -308,14 +343,17 @@ button:hover,
 /* we can add more colors but i'll put in here some examples */
 .primary, .active[data-class-ref="primary"] {
   background-color: #0280a4;
-  border-color: #026F8D;
-  box-shadow: inset 0 0 4px #026F8D;
+  border-color: #026f8d;
+  box-shadow: inset 0 0 4px #026f8d;
 }
 .active[data-class-ref="primary"]:hover {
   background-color: #0280a4;
 }
 button.primary:hover, .button.primary:hover {
-  background-color: #026F8D;
+  background-color: #026f8d;
+}
+[data-style-ref="primary"] .lesson-title {
+  border-bottom: 1px solid #0280a4;
 }
 .secondary, .active[data-class-ref="secondary"] {
   background-color: #9742ff;
@@ -328,6 +366,9 @@ button.primary:hover, .button.primary:hover {
 button.secondary:hover, .button.secondary:hover {
   background-color:  #aa00ff;
 }
+[data-style-ref="secondary"] .lesson-title {
+  border-bottom: 1px solid #9742ff;
+}
 .error, .active[data-class-ref="error"] {
   background-color: #e80243;
   border-color: #d0013c;
@@ -338,6 +379,9 @@ button.secondary:hover, .button.secondary:hover {
 }
 button.error:hover, .button.error:hover {
   background-color: #d0013c;
+}
+[data-style-ref="error"] .lesson-title {
+  border-bottom: 1px solid #e80243;
 }
 .waiting, .active[data-class-ref="waiting"] {
   background-color: #c85000;
@@ -350,6 +394,9 @@ button.error:hover, .button.error:hover {
 button.waiting:hover, .button.waiting:hover {
   background-color: #b95c00;
 }
+[data-style-ref="waiting"] .lesson-title {
+  border-bottom: 1px solid #c85000;
+}
 .success, .active[data-class-ref="success"] {
   background-color: #02835e;
   border-color: #028378;
@@ -360,6 +407,9 @@ button.waiting:hover, .button.waiting:hover {
 }
 button.success:hover, .button.success:hover {
   background-color:  #028378;
+}
+[data-style-ref="success"] .lesson-title {
+  border-bottom: 1px solid #02835e;
 }
 .progress.default {
   background-color:  #00b5e7;
@@ -382,20 +432,27 @@ button.success:hover, .button.success:hover {
 
 }
 
-.courseList {
-  font-family: "Open Sans", sans-serif;
+.course-list {
+  font-family: 'Open Sans', sans-serif;
   list-style-type: none;
-  font-size: 10pt;
+  font-size: 18px;
   font-weight: bold;
-  line-height: 1.9;
-  color:#8692A0;
+  line-height: 1.8;
+  display: block;
+  margin-right: 30px;
 }
 
-.exerciseList {
-  font-family: "Roboto", sans-serif;
-  font-size: 10pt;
+.exercise-list {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   list-style-type: none;
   font-weight: normal;
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.lesson-title {
+  position: relative;
 }
 
 /* CHECK BOX STYLING NOTE
@@ -451,4 +508,29 @@ label.checkBoxLabel {
   box-shadow: 2px 2px 19px 0px rgba(0, 0, 0, 0.49);
  width: 100%;
   height:100%;
+}
+
+
+
+
+
+.lesson-title .button {
+  position: absolute;
+  font-size: 16px;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  line-height: 10px;
+  min-width: 25px;
+}
+.lesson-title {
+  margin-bottom: 7px;
+}
+.lesson-title .muted {
+  font-size: 14px;
+  position: absolute;
+  top: 1px;
+  right: 40px;
+  display: none;
+  font-weight: 500;
 }

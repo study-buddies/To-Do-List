@@ -2,13 +2,19 @@
 $(function() {
   $(".tabs-nav li:first-child a").click();
 });
-$(".tabs-nav a").on("click", function() {
+$(".tabs-nav a").on("click",function(){
   let toggle = $(this).attr("data-toggle");
-  $(".panels").removeClass("active");
-  $("#" + toggle).addClass("active");
+  $(".tab-panel .panels").removeClass("active");
+  $("#panel-" + toggle).addClass("active");
   $(".tabs-nav a").removeClass("active");
   $(this).addClass("active");
-  $(".tabs-nav").css("border-bottom-color", $(this).css("background-color"));
+  $(".tabs-nav").css("border-bottom-color",$(this).css("background-color"));
+  $(".progress[data-panel-ref]").attr("class", "progress");
+  $(".progress[data-panel-ref=" + toggle + "]").addClass($(this).attr("data-class-ref"));
+});
+$(function(){
+  $(".state-buttons").html($(".state-buttons").attr("data-start-state-text"));
+  $(".tabs-nav li:first-child a").click();
 });
 //@Sachin and @Steve Prager code//
 /*
@@ -197,23 +203,27 @@ $(function() {
   }
 });
 
-$("input[id*=lesson]").on("click", function() {
+$("input[id*=lesson]").on("click", function(){
   let parent = $(this).parent();
-  if (parent.find(":checkbox").prop("checked")) {
-    parent.find(":checkbox").prop("checked", true);
-  } else {
-    parent.find(":checkbox").prop("checked", false);
+  if(parent.find(":checkbox").prop("checked")) {
+    parent.find(":checkbox").prop( "checked", true );
+    parent.find("span").addClass("active");
   }
-});
+  else {
+    parent.find(":checkbox").prop( "checked", false );
+    parent.find("span").removeClass("active");
+  } });
 
-$("input[id*=-]").on("click", function() {
-  $(
-    "#lesson" +
-      $(this)
-        .attr("id")
-        .charAt(0)
-  ).prop("checked", false);
-});
+$("input[id*=-]").on("click", function(){
+  let parent = $(this).parents(".exercise-list");
+  if(parent.find(":checked").length === parent.find("[type=checkbox]").length) {
+    $("#lesson" + $(this).attr("id").charAt(0)).prop("checked", true);
+    $(this).parents(".lesson-title").find("span").addClass("active");
+  } else {
+    $("#lesson" + $(this).attr("id").charAt(0)).prop("checked", false);
+    $(this).parents(".lesson-title").find("span").removeClass("active");
+  }
+  });
 //@Brendan Pettis code//
 // Declarations
 const title = $(".update");
