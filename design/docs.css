@@ -1,0 +1,157 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #333;
+  height: 100vh;
+  overflow: hidden;
+}
+header {
+  background-color: #02b7e9;
+  min-height: 90px;
+}
+header, footer {
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+main, .tab-panel .panels  {
+  flex: 1;
+}
+.logo img, .user-avatar img {
+  width: auto;
+  height: 65px;
+}
+.user-avatar img {
+  border-radius: 50%;
+  border: 3px solid #4c4e4e;
+}
+.progress-bar {
+  margin-bottom: .75rem;
+}
+label[for=progress-bar] {
+  display: inline-block;
+  margin-bottom: .35rem;
+}
+.divider {
+  height: 1px;
+  background-color: #888;
+}
+.muted {
+  color: #999;
+}
+.tab-panel {
+  height: 100%;
+}
+footer {
+  background-color: #02b7e9;
+  height: 60px;
+}
+.social-links {
+  list-style: none;
+  font-size: 22px;
+}
+.social-links li {
+  display: inline-block;
+  margin-left: .5rem;
+}
+.social-links a {
+  color: inherit;
+}
+.social-links a:hover {
+  color: #555;
+}
+
+
+/* Checkboxes Style */
+
+.course-list-header {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.course-list {
+  font-family: 'Open Sans', sans-serif;
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.8;
+  display: block;
+  margin-right: 30px;
+}
+
+.exercise-list {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  list-style-type: none;
+  font-weight: normal;
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.lesson-title {
+  position: relative;
+}
+
+/* CHECK BOX STYLING NOTE
+Unfortunately, default checkboxes cannot be styled. Therefore, we need to hide originals and create new boxes on top of them.
+*/
+
+.check-box {
+	position:absolute;
+  z-index:-1000;
+  left:-1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height:1px;
+  width:1px;
+  margin:-1px;
+  padding:0;
+  border:0;
+}
+
+.check-box + label.check-box-label {
+	padding-left:30px;
+	height:25px;
+	display:block;
+  line-height:25px;
+  background-repeat:no-repeat;
+  background-position: 0 0;
+	font-size:18px;
+	vertical-align:middle;
+	cursor:pointer;
+  margin-bottom: 7px
+}
+
+.check-box:checked + label.check-box-label {
+	background-position: 0 -25px;
+  color: #999;
+}
+
+ /*checkbox image design take from CSS checkbox. I may supplant this later with custom design. */
+label.check-box-label {
+	background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_391ce065f36b1460c4845fa9b5173fba.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.lesson-title .button {
+  position: absolute;
+  font-size: 16px;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  line-height: 10px;
+  min-width: 25px;
+}
+.lesson-title {
+  margin-bottom: 7px;
+}
+.lesson-title .muted {
+  font-size: 14px;
+  position: absolute;
+  top: 1px;
+  right: 40px;
+  display: none;
+  font-weight: 500;
+}
